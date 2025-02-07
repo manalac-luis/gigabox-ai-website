@@ -14,7 +14,7 @@ export default function Terms() {
             <p>By accessing and using gigabox.ai, you accept and agree to be bound by the terms and provision of this agreement.</p>
 
             <h2>2. Use License</h2>
-            <p>Permission is granted to temporarily access the materials (information or software) on gigabox.ai's website for personal, non-commercial transitory viewing only.</p>
+            <p>Permission is granted to temporarily access the materials (information or software) on gigabox.ai&apos;s website for personal, non-commercial transitory viewing only.</p>
 
             <h2>3. Service Description</h2>
             <p>gigabox.ai provides cloud infrastructure automation services, including but not limited to Terraform-driven provisioning, Kubernetes orchestration, and SecDevOps workflows.</p>
