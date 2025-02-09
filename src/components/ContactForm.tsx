@@ -29,14 +29,14 @@ const ContactForm = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-gray-50">
+    <div id="contact" className="py-24 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">Contact Us</h2>
         <div className="max-w-2xl mx-auto">
           <div id="hubspot-form-container"></div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
