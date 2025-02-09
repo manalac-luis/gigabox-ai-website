@@ -19,6 +19,11 @@ export default function Features() {
       title: 'Cost Optimization',
       description: 'Maximize efficiency and reduce cloud spending with intelligent resource management and optimization.',
       icon: '💰'
+    },
+    {
+      title: 'SOC 2 Compliance',
+      description: 'Gather evidence for SOC 2 compliance with automated security controls and documentation.',
+      icon: '✓'
     }
   ];
 
@@ -29,7 +34,7 @@ export default function Features() {
           <h2 className="text-3xl font-bold text-gray-900">Infrastructure Made Simple</h2>
           <p className="mt-4 text-xl text-gray-600">Say goodbye to infrastructure headaches and hello to accelerated innovation</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
               <div className="text-4xl mb-4">{feature.icon}</div>
