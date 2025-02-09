@@ -1,24 +1,32 @@
 export default function OpsPage() {
   return (
     <div className="p-4">
-      <h1 className="text-3xl font-bold mb-2">Technical Operations Platform</h1>
-      <p className="text-blue-600 font-semibold mb-6">Powered by Agentic AI</p>
-      <p className="text-gray-600 mb-8">
-        Accelerate your technical operations with our comprehensive platform that covers everything from infrastructure management to security compliance automation, enhanced by intelligent AI agents that understand and adapt to your operational needs.
-      </p>
+      <div className="text-center mb-12">
+        <h1 className="text-3xl font-bold mb-2">Technical Operations Platform</h1>
+        <p className="text-blue-600 font-semibold mb-4">Powered by Agentic AI</p>
+        <p className="text-gray-600 mb-8 max-w-3xl mx-auto">
+          Accelerate your technical operations with our comprehensive platform that covers everything from infrastructure management to security compliance automation, enhanced by intelligent AI agents that understand and adapt to your operational needs.
+        </p>
+        
+      </div>
 
       <div className="grid md:grid-cols-2 gap-6">
         <div className="bg-white rounded-lg shadow p-6">
-          <h2 className="text-xl font-semibold mb-3">Infrastructure as Code</h2>
-          <p className="text-gray-600 mb-4">
-            Automate your infrastructure deployment with our IaC solutions. Manage cloud resources, configure environments, and ensure infrastructure consistency across your organization.
-          </p>
-          <a 
-            href="/ops/iac" 
-            className="text-blue-600 hover:text-blue-800 font-medium"
-          >
-            Explore IaC solutions →
-          </a>
+          <div className="flex flex-col h-full">
+            <div className="mb-4">
+              
+            </div>
+            <h2 className="text-xl font-semibold mb-3">Infrastructure as Code</h2>
+            <p className="text-gray-600 mb-4">
+              Automate your infrastructure deployment with our IaC solutions. Manage cloud resources, configure environments, and ensure infrastructure consistency across your organization.
+            </p>
+            <a 
+              href="/ops/iac" 
+              className="text-blue-600 hover:text-blue-800 font-medium mt-auto"
+            >
+              Explore IaC solutions →
+            </a>
+          </div>
         </div>
 
         <div className="bg-white rounded-lg shadow p-6">

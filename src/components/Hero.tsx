@@ -9,6 +9,12 @@ export default function Hero() {
            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
              Seamlessly integrate Terraform, Kubernetes, and SecDevOps workflows across AWS, Azure, and GCP. Focus on growing your business while we handle your infrastructure.
            </p>
+           <a 
+             href="/ops"
+             className="inline-block px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors duration-200 text-lg"
+           >
+             Explore Platform
+           </a>
          </div>
        </div>
      </div>
