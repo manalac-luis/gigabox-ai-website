@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
 import Footer from '@/components/Footer';
+import ContactForm from '@/components/ContactForm';
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <div className="pt-16"> {/* Add padding to account for fixed navbar */}
         <Hero />
         <Features />
+        <ContactForm />
       </div>
       <Footer />
     </main>
