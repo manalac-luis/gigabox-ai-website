@@ -9,7 +9,7 @@ export default function SOC2Page() {
             SOC 2 is a voluntary compliance standard for service organizations that specifies how organizations should manage customer data. The standard is based on five Trust Services Criteria: security, availability, processing integrity, confidentiality, and privacy.
           </p>
           <p className="text-gray-600">
-            Achieving and maintaining SOC 2 compliance demonstrates your organization's commitment to data security and privacy, building trust with customers and partners.
+            Achieving and maintaining SOC 2 compliance demonstrates your organization&apos;s commitment to data security and privacy, building trust with customers and partners.
           </p>
         </div>
 
