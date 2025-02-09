@@ -11,9 +11,9 @@ const ContactForm = () => {
 <div class="hs-form-frame" data-region="na1" data-form-id="0d521ccb-8401-4d88-8c66-21ccb0c9d7ad" data-portal-id="49061441"></div>
 */
     script.addEventListener('load', () => {
-      // @ts-ignore
+      // @ts-expect-error HubSpot types are not available
       if (window.hbspt) {
-        // @ts-ignore
+        // @ts-expect-error HubSpot types are not available
         window.hbspt.forms.create({
           region: "na1", // Update with your region
           portalId: "49061441", // Replace with your HubSpot portal ID
