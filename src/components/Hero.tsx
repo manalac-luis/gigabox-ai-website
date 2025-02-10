@@ -6,6 +6,12 @@ export default function Hero() {
            <h1 className="text-4xl md:text-6xl font-bold mb-6">
              Launch Your Cloud Infrastructure in Record Time
            </h1>
+           <div className="mb-4">
+             <p className="text-2xl md:text-3xl font-semibold text-blue-100">"5 + 2"</p>
+             <p className="text-xl md:text-2xl text-blue-100">
+               Security, Availability, Processing Integrity, Confidentiality, Privacy + Automation and Cost Optimization
+             </p>
+           </div>
            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
              Seamlessly integrate Terraform, Kubernetes, and SecDevOps workflows across AWS, Azure, and GCP. Focus on growing your business while we handle your infrastructure.
            </p>
