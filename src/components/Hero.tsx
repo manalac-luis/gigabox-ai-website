@@ -7,7 +7,7 @@ export default function Hero() {
              Launch Your Cloud Infrastructure in Record Time
            </h1>
            <div className="mb-4">
-             <p className="text-2xl md:text-3xl font-semibold text-blue-100">"5 + 2"</p>
+             <p className="text-2xl md:text-3xl font-semibold text-blue-100">&ldquo;5 + 2&rdquo;</p>
              <p className="text-xl md:text-2xl text-blue-100">
                Security, Availability, Processing Integrity, Confidentiality, Privacy + Automation and Cost Optimization
              </p>
