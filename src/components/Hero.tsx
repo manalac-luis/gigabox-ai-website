@@ -1,10 +1,14 @@
-export default function Hero() {
+interface HeroProps {
+  title?: string;
+}
+
+export default function Hero({ title = "Agentic AI-Powered DevOps Automation" }: HeroProps) {
    return (
      <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white">
        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
          <div className="text-center">
            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-             Launch Your Cloud Infrastructure in Record Time
+             {title}
            </h1>
            <div className="mb-4">
              <p className="text-2xl md:text-3xl font-semibold text-blue-100">&ldquo;5 + 2&rdquo;</p>
