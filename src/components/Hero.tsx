@@ -23,6 +23,12 @@ export default function Hero() {
                Explore Platform
              </a>
              <a 
+               href="/blog"
+               className="inline-block px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-blue-600 transition-colors duration-200 text-lg"
+             >
+               Blog
+             </a>
+             <a 
                href="#contact"
                className="inline-block px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-blue-600 transition-colors duration-200 text-lg"
              >
