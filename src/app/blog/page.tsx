@@ -2,6 +2,13 @@ import { getAllPosts, getPost } from '@/lib/markdown';
 import { format, parseISO } from 'date-fns';
 import Link from 'next/link';
 
+interface BlogPost {
+  filename: string;
+  date: string;
+  title: string;
+  contentHtml: string;
+}
+
 export default async function BlogPage({
   searchParams,
 }: {
@@ -10,6 +17,22 @@ export default async function BlogPage({
   const resolvedParams = await searchParams;
   const posts = getAllPosts();
   const selectedPostFilename = (resolvedParams?.post as string) || posts[0].filename;
+  
+  // Get all post titles
+  const postsWithTitles = await Promise.all(
+    posts.map(async (post) => {
+      const fullPost = await getPost(post.filename);
+      // Get first line as title
+      const firstLine = fullPost.contentHtml
+        .split('\n')[0]
+        .replace(/<[^>]*>/g, ''); // Remove any HTML tags
+      return {
+        ...post,
+        title: firstLine || post.filename.replace('.md', '')
+      };
+    })
+  );
+  
   const selectedPost = await getPost(selectedPostFilename);
   
   return (
@@ -32,19 +55,19 @@ export default async function BlogPage({
               <h2 className="text-lg font-semibold text-gray-900 mb-4">All Posts</h2>
               <div className="overflow-x-auto lg:overflow-x-visible">
                 <ul className="flex lg:flex-col gap-3 min-w-min">
-                  {posts.map((post) => {
+                  {postsWithTitles.map((post) => {
                     const date = parseISO(post.date);
                     return (
-                      <li key={post.filename} className="min-w-[200px] lg:min-w-0">
+                      <li key={post.filename} className="min-w-[250px] lg:min-w-0">
                         <Link
                           href={`/blog?post=${post.filename}`}
                           className={`block p-2 rounded hover:bg-blue-50 transition-colors duration-200 ${
                             post.filename === selectedPostFilename ? 'bg-blue-50 text-blue-600 font-medium' : 'text-gray-600'
                           }`}
                         >
-                          <div className="text-sm">{format(date, 'MMMM d, yyyy')}</div>
+                          <div className="text-sm text-gray-500">{format(date, 'MMMM d, yyyy')}</div>
                           <div className="text-sm font-medium mt-1">
-                            {post.filename.replace('.md', '')}
+                            {post.title}
                           </div>
                         </Link>
                       </li>
