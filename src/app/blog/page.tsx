@@ -19,7 +19,7 @@ export default async function BlogPage({
   const selectedPostFilename = (resolvedParams?.post as string) || posts[0].filename;
   
   // Get all post titles
-  const postsWithTitles = await Promise.all(
+  const postsWithTitles: BlogPost[] = await Promise.all(
     posts.map(async (post) => {
       const fullPost = await getPost(post.filename);
       // Get first line as title
@@ -28,7 +28,8 @@ export default async function BlogPage({
         .replace(/<[^>]*>/g, ''); // Remove any HTML tags
       return {
         ...post,
-        title: firstLine || post.filename.replace('.md', '')
+        title: firstLine || post.filename.replace('.md', ''),
+        contentHtml: fullPost.contentHtml
       };
     })
   );
