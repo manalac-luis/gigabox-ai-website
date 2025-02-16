@@ -2,16 +2,14 @@ import { getAllPosts, getPost } from '@/lib/markdown';
 import { format, parseISO } from 'date-fns';
 import Link from 'next/link';
 
-type SearchParams = { [key: string]: string | string[] | undefined }
-
-type Props = {
-  params: { slug: string };
-  searchParams: SearchParams;
-}
-
-export default async function BlogPage({ searchParams }: Props) {
+export default async function BlogPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
+  const resolvedParams = await searchParams;
   const posts = getAllPosts();
-  const selectedPostFilename = (searchParams?.post as string) || posts[0].filename;
+  const selectedPostFilename = (resolvedParams?.post as string) || posts[0].filename;
   const selectedPost = await getPost(selectedPostFilename);
   
   return (
