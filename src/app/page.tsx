@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import BlogPreview from '@/components/BlogPreview';
 import Sponsored from '@/components/Sponsored';
 import Features from '@/components/Features';
 import Footer from '@/components/Footer';
@@ -12,6 +13,7 @@ export default function Home() {
       <div className="pt-16"> {/* Add padding to account for fixed navbar */}
         <Hero />
         <Sponsored />
+        <BlogPreview />
         <Features />
         <ContactForm />
       </div>
