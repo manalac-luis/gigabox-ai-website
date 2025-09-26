@@ -86,7 +86,7 @@ export default function Features() {
           </div>
           <div className="mt-8 text-center">
             <a
-              href="https://oneui.gigabox.ai/"
+              href="/oneui"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex rounded-lg bg-blue-600 text-white px-5 py-3 text-sm font-semibold hover:bg-blue-700"

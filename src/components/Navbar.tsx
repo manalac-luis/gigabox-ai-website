@@ -13,24 +13,23 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="hidden md:flex items-center gap-6 text-sm">
-            <a href="#developers" className="hover:text-blue-600">Developers</a>
-            <a href="#templates" className="hover:text-blue-600">App Templates</a>
-            <a href="#idp" className="hover:text-blue-600">IDP</a>
-            <a href="#contact" className="hover:text-blue-600">Contact</a>
-            <a
-              href="https://oneui.gigabox.ai/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link href="/#developers" className="hover:text-blue-600">Developers</Link>
+            <Link href="/#templates" className="hover:text-blue-600">App Templates</Link>
+            <Link href="/#idp" className="hover:text-blue-600">IDP</Link>
+            <Link href="/#contact" className="hover:text-blue-600">Contact</Link>
+            <Link
+              href="/oneui"
               className="inline-flex rounded-lg bg-blue-600 text-white px-4 py-2 font-medium hover:bg-blue-700"
             >
-              See OneUI ↗
-            </a>
+              See OneUI
+            </Link>
           </div>
         </div>
       </div>
     </nav>
   );
 }
+
 
 // 'use client';
 
