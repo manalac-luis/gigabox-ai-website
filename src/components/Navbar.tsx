@@ -17,6 +17,15 @@ export default function Navbar() {
             <Link href="/#templates" className="hover:text-blue-600">App Templates</Link>
             <Link href="/#idp" className="hover:text-blue-600">IDP</Link>
             <Link href="/#contact" className="hover:text-blue-600">Contact</Link>
+
+            {/* NEW: Important Docs */}
+            <Link
+              href="/docs"
+              className="inline-flex rounded-lg bg-blue-600 text-white px-4 py-2 font-medium hover:bg-blue-700"
+            >
+              Important Docs
+            </Link>
+
             <Link
               href="/oneui"
               className="inline-flex rounded-lg bg-blue-600 text-white px-4 py-2 font-medium hover:bg-blue-700"
@@ -29,7 +38,6 @@ export default function Navbar() {
     </nav>
   );
 }
-
 
 // 'use client';
 
@@ -45,8 +53,21 @@ export default function Navbar() {
 //               gigabox.ai
 //             </Link>
 //           </div>
+//           <div className="hidden md:flex items-center gap-6 text-sm">
+//             <Link href="/#developers" className="hover:text-blue-600">Developers</Link>
+//             <Link href="/#templates" className="hover:text-blue-600">App Templates</Link>
+//             <Link href="/#idp" className="hover:text-blue-600">IDP</Link>
+//             <Link href="/#contact" className="hover:text-blue-600">Contact</Link>
+//             <Link
+//               href="/oneui"
+//               className="inline-flex rounded-lg bg-blue-600 text-white px-4 py-2 font-medium hover:bg-blue-700"
+//             >
+//               See OneUI
+//             </Link>
+//           </div>
 //         </div>
 //       </div>
 //     </nav>
 //   );
-// } 
+// }
+
