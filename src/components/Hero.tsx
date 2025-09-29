@@ -19,7 +19,7 @@ export default function Hero({
             {title}
           </h1>
           <p className="text-xl md:text-2xl mb-4 text-blue-100 max-w-3xl mx-auto">
-            For Python & TypeScript devs who need speed, safety, and auditability.
+            For Python & TypeScript devs who need speed, safety, and auditability. Power of real code with the ship velocity of no-code
           </p>
           <p className="text-xl md:text-2xl mb-4 text-blue-100 max-w-3xl mx-auto">
             <span className="font-semibold">OneUI</span> is an AI Development Platform for software developers building
