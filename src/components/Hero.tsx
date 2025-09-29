@@ -5,7 +5,7 @@ interface HeroProps {
 }
 
 export default function Hero({
-  title = "We help YOU build practical, governed AI applications.",
+  title = "Ship governed AI apps in days, not months.",
 }: HeroProps) {
   return (
     <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white">
@@ -18,7 +18,9 @@ export default function Hero({
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             {title}
           </h1>
-
+          <p className="text-xl md:text-2xl mb-4 text-blue-100 max-w-3xl mx-auto">
+            For Python & TypeScript devs who need speed, safety, and auditability.
+          </p>
           <p className="text-xl md:text-2xl mb-4 text-blue-100 max-w-3xl mx-auto">
             <span className="font-semibold">OneUI</span> is an AI Development Platform for software developers building
             AI and AI-assisted apps. Deploy in your Kubernetes cluster or cloud, use your toolchain,
