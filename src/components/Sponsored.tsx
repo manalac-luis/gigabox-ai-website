@@ -4,7 +4,7 @@ export default function Sponsored() {
   return (
     <div className="py-8 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center text-2xl font-semibold text-gray-600 mb-8">
+        <h2 className="text-center text-2xl font-semibold text-black mb-8">
           Runs on AWS, Azure, GCP, and Kubernetes
         </h2>
 
@@ -41,7 +41,7 @@ export default function Sponsored() {
             />
           </div>
 
-          {/* NEW: Kubernetes */}
+          {/* Kubernetes */}
           <div className="w-full md:w-auto scale-75 md:scale-100">
             <Image
               src="/kubernetes-icon-color.svg"
@@ -64,8 +64,10 @@ export default function Sponsored() {
 //     <div className="py-8 bg-white">
 //       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 //         <h2 className="text-center text-2xl font-semibold text-gray-600 mb-8">
-//           Sponsored By
+//           Runs on AWS, Azure, GCP, and Kubernetes
 //         </h2>
+
+//         {/* Logos */}
 //         <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-12">
 //           <div className="w-full md:w-auto scale-75 md:scale-100">
 //             <Image
@@ -74,17 +76,20 @@ export default function Sponsored() {
 //               width={150}
 //               height={75}
 //               className="object-contain"
+//               priority
 //             />
 //           </div>
+
 //           <div className="w-full md:w-auto scale-75 md:scale-100">
 //             <Image
 //               src="/azure.png"
-//               alt="Azure Logo"
-//               width={300}
-//               height={150}
+//               alt="Microsoft Azure Logo"
+//               width={160}
+//               height={75}
 //               className="object-contain"
 //             />
 //           </div>
+
 //           <div className="w-full md:w-auto scale-75 md:scale-100">
 //             <Image
 //               src="/gcp.png"
@@ -94,8 +99,20 @@ export default function Sponsored() {
 //               className="object-contain"
 //             />
 //           </div>
+
+//           {/* NEW: Kubernetes */}
+//           <div className="w-full md:w-auto scale-75 md:scale-100">
+//             <Image
+//               src="/kubernetes-icon-color.svg"
+//               alt="Kubernetes Logo"
+//               width={140}
+//               height={140}
+//               className="object-contain"
+//             />
+//           </div>
 //         </div>
 //       </div>
 //     </div>
 //   );
-// } 
+// }
+
