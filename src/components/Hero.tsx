@@ -23,7 +23,7 @@ export default function Hero({
             For Python & TypeScript devs who need speed, safety, and auditability. Power of real code with the ship velocity of no-code.
           </p>
           <p className="text-xl md:text-2xl mb-4 text-white/90 max-w-3xl mx-auto">
-            <span className="font-semibold">OneUI</span> is an AI Development Platform for software developers building
+            <span className="font-semibold">LaunchOps</span> is an AI Development Platform for software developers building
             AI and AI-assisted apps. Deploy in your Kubernetes cluster or cloud, use your toolchain,
             and <span className="font-semibold">skip the AI plumbing</span>—with policies, receipts, and audit by default.
           </p>
@@ -47,10 +47,10 @@ export default function Hero({
           <div className="space-x-4">
             {/* Internal links should use <Link/> */}
             <Link
-              href="/oneui"
+              href="/LaunchOps"
               className="inline-block px-8 py-4 bg-white text-black font-bold rounded-lg hover:bg-neutral-100 transition-colors duration-200 text-lg"
             >
-              Explore OneUI
+              Explore LaunchOps
             </Link>
 
             {/* NEW: Important Docs */}
@@ -108,7 +108,7 @@ export default function Hero({
 //             For Python & TypeScript devs who need speed, safety, and auditability. Power of real code with the ship velocity of no-code.
 //           </p>
 //           <p className="text-xl md:text-2xl mb-4 text-blue-100 max-w-3xl mx-auto">
-//             <span className="font-semibold">OneUI</span> is an AI Development Platform for software developers building
+//             <span className="font-semibold">LaunchOps</span> is an AI Development Platform for software developers building
 //             AI and AI-assisted apps. Deploy in your Kubernetes cluster or cloud, use your toolchain,
 //             and <span className="font-semibold">skip the AI plumbing</span>—with policies, receipts, and audit by default.
 //           </p>
@@ -132,10 +132,10 @@ export default function Hero({
 //           <div className="space-x-4">
 //             {/* Internal links should use <Link/> */}
 //             <Link
-//               href="/oneui"
+//               href="/LaunchOps"
 //               className="inline-block px-8 py-4 bg-white text-blue-700 font-bold rounded-lg hover:bg-blue-50 transition-colors duration-200 text-lg"
 //             >
-//               Explore OneUI
+//               Explore LaunchOps
 //             </Link>
 
 //             {/* NEW: Important Docs */}

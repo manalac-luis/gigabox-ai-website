@@ -19,18 +19,18 @@ export default function Navbar() {
             <Link href="/#contact" className="hover:text-black">Contact</Link>
 
             {/* Important Docs */}
-            <Link
+            {/* <Link
               href="/docs"
               className="inline-flex rounded-lg bg-black text-white px-4 py-2 font-medium hover:bg-neutral-900 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
             >
               Important Docs
-            </Link>
+            </Link> */}
 
             <Link
-              href="/oneui"
+              href="/launchops"
               className="inline-flex rounded-lg bg-black text-white px-4 py-2 font-medium hover:bg-neutral-900 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
             >
-              See OneUI
+              LaunchOps
             </Link>
           </div>
         </div>

@@ -73,7 +73,7 @@ export default function Features() {
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-gray-900">Internal Developer Platform (IDP)</h2>
             <p className="mt-4 text-lg text-gray-600">
-              An example use case is to use OneUI as the basis of an <span className="font-semibold">IDP</span> for
+              An example use case is to use LaunchOps as the basis of an <span className="font-semibold">IDP</span> for
               DevOps, Platform Engineering, and SRE—so your team ships faster without rebuilding AI plumbing.
             </p>
           </div>
@@ -86,12 +86,12 @@ export default function Features() {
           </div>
           <div className="mt-8 text-center">
             <a
-              href="/oneui"
+              href="/LaunchOps"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex rounded-lg bg-black text-white px-5 py-3 text-sm font-semibold hover:bg-neutral-900 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
             >
-              See how OneUI powers your IDP ↗
+              See how LaunchOps powers your IDP ↗
             </a>
           </div>
         </div>
@@ -175,7 +175,7 @@ export default function Features() {
 //           <div className="text-center mb-10">
 //             <h2 className="text-3xl font-bold text-gray-900">Internal Developer Platform (IDP)</h2>
 //             <p className="mt-4 text-lg text-gray-600">
-//               An example use case is to use OneUI as the basis of an <span className="font-semibold">IDP</span> for
+//               An example use case is to use LaunchOps as the basis of an <span className="font-semibold">IDP</span> for
 //               DevOps, Platform Engineering, and SRE—so your team ships faster without rebuilding AI plumbing.
 //             </p>
 //           </div>
@@ -188,12 +188,12 @@ export default function Features() {
 //           </div>
 //           <div className="mt-8 text-center">
 //             <a
-//               href="/oneui"
+//               href="/LaunchOps"
 //               target="_blank"
 //               rel="noopener noreferrer"
 //               className="inline-flex rounded-lg bg-blue-600 text-white px-5 py-3 text-sm font-semibold hover:bg-blue-700"
 //             >
-//               See how OneUI powers your IDP ↗
+//               See how LaunchOps powers your IDP ↗
 //             </a>
 //           </div>
 //         </div>
