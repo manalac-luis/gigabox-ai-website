@@ -5,6 +5,7 @@ import Sponsored from '@/components/Sponsored';
 import Features from '@/components/Features';
 import Footer from '@/components/Footer';
 import ContactForm from '@/components/ContactForm';
+import Team from '@/components/Team';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <BlogPreview />
       <Features />
       <ContactForm />
+      <Team />
       <Footer />
     </main>
   );

@@ -1,204 +1,84 @@
+import Link from 'next/link'
+import Image from 'next/image'
+
 export default function Features() {
-  const devFeatures = [
-    "Quickstart: helm/kustomize on your K8s or Cloud Run",
-    "SDKs/APIs: Python & HTTP; MCP-style tool interfaces",
-    "Policy engine: pre/post rules, redaction, approvals",
-    "Receipts & audit: traceable runs (inputs, evidence, costs)",
-    "ChatBlocks UI: markdown / table / chart / job streaming",
-    "Multi-LLM router: cost/latency/compliance aware with failover",
-  ];
-
-  const appTemplates = [
-    { title: "RevOps App Template", desc: "Lead discovery, enrichment, CRM sync, dashboards. Start here and customize." },
-    { title: "Data Analytics App Template", desc: "Sheets→SQL ingestion, governed queries, and charts with receipts." },
-    { title: "Finance Ops App Template", desc: "QuickBooks→SQL→Metabase sync, cost tracking, reconciliation helpers." },
-    { title: "Compliance/Research Template", desc: "Web-first answers with citations, golden-set evals, policy approvals." },
-    { title: "Leasing/Field Ops Template", desc: "Deterministic playbooks with explainable decisions and audit." },
-    { title: "Education/Health Template", desc: "Task-specific copilots with Decision · Rationale · Citations outputs." },
-  ];
-
-  const idpBullets = [
-    "GitHub Actions → GHCR → Cloud Run/K8s (Argo CD) with GitOps",
-    "Observability: Prometheus/Grafana, structured logs, tracing",
-    "Secrets & config via cloud secret manager; per-env promotion",
-    "Security: SSO/SAML, least-privilege, egress allowlists, CSP",
-    "Reliability: budgets, rate limits, circuit breakers, health checks",
-    "Backups/DR and incident runbooks with p95/p99 SLOs",
-  ];
-
   return (
-    <>
-      {/* For Developers */}
-      <section id="developers" className="py-20 bg-gray-50 border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-gray-900">For Developers</h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Build internal AI apps in your cloud with your toolchain—skip the AI plumbing.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {devFeatures.map((f) => (
-              <div key={f} className="bg-white p-6 rounded-lg shadow-sm border">
-                <p className="text-gray-800 text-sm">{f}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+    <section 
+      id="features"
+      className="relative scroll-mt-24 bg-black text-white overflow-hidden"
+    >
+      {/* subtle right-side vignette */}
+      <div className="pointer-events-none absolute inset-y-0 right-0 hidden md:block w-1/2">
+        <div className="h-full bg-gradient-to-l from-neutral-800/70 to-transparent" />
+      </div>
 
-      {/* App Templates (examples) */}
-      <section id="templates" className="py-20 bg-white border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-gray-900">App Templates (examples)</h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Use these as starting points—tailor them to your team’s workflow and policies.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {appTemplates.map((t) => (
-              <div key={t.title} className="bg-white p-6 rounded-lg shadow-sm border">
-                <h3 className="text-lg font-semibold">{t.title}</h3>
-                <p className="text-gray-600 mt-2 text-sm">{t.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+        <header className="max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+            gigabox.ai’s{' '}
+            <Link href="/launchops" className="underline decoration-white/30 underline-offset-4 hover:decoration-white">
+              LaunchOps
+            </Link>
+          </h2>
+          <p className="mt-4 text-white/80 italic">
+            Our proprietary toolkit built to accelerate the development of AI applications. We
+            empower high-potential teams to move faster, build smarter, and ship sooner.
+          </p>
+        </header>
 
-      {/* IDP (Internal Developer Platform) */}
-      <section id="idp" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-gray-900">Internal Developer Platform (IDP)</h2>
-            <p className="mt-4 text-lg text-gray-600">
-              An example use case is to use LaunchOps as the basis of an <span className="font-semibold">IDP</span> for
-              DevOps, Platform Engineering, and SRE—so your team ships faster without rebuilding AI plumbing.
-            </p>
+        <div className="mt-10 grid gap-8 lg:grid-cols-2">
+          {/* Left column (copy) */}
+          <div className="space-y-8 max-w-3xl">
+            <div>
+              <p className="font-semibold">The fastest way to get your AI product off the ground:</p>
+              <p className="mt-2 text-white/90">
+                You’ve got the vision. You know what needs to be built. But slow execution,
+                scattered teams, and rising frustration are holding you back.
+                <br />
+                <Link href="/launchops" className="underline decoration-white/30 underline-offset-4 hover:decoration-white font-medium">
+                  LaunchOps
+                </Link>{' '}by gigabox.ai exists to fix that.
+              </p>
+            </div>
+
+            <div>
+              <p className="font-semibold">LaunchOps delivers the technical muscle to build and ship smarter:</p>
+              <p className="mt-2 text-white/90">
+                We accelerate development for early-stage AI startups using our proprietary
+                <Link href="/launchops" className="ml-1 underline decoration-white/30 underline-offset-4 hover:decoration-white font-medium">
+                  LaunchOps
+                </Link>{' '}toolkits; purpose-built for LLMs, agent frameworks, and AMPC systems.
+                You get focused execution, clear outcomes, and working code that drives value.
+              </p>
+            </div>
+
+            <div>
+              <p className="font-semibold">Not consultants. Not contractors. A launch-ready force:</p>
+              <p className="mt-2 text-white/90">
+                We embed with your team, stabilize your roadmap, and build exactly what you need →
+                fast, clean, and with care. From MVPs to feature builds,
+                <Link href="/launchops" className="ml-1 underline decoration-white/30 underline-offset-4 hover:decoration-white font-medium">
+                  LaunchOps
+                </Link>{' '}gets you to launch mode without the headaches.
+              </p>
+            </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {idpBullets.map((b) => (
-              <div key={b} className="bg-white p-6 rounded-lg shadow-sm border">
-                <p className="text-gray-800 text-sm">{b}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 text-center">
-            <a
-              href="/LaunchOps"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex rounded-lg bg-black text-white px-5 py-3 text-sm font-semibold hover:bg-neutral-900 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
-            >
-              See how LaunchOps powers your IDP ↗
-            </a>
+
+          {/* Right column with LaunchOps wave image */}
+          <div className="hidden lg:block">
+            <div className="relative h-full min-h-[320px] w-full rounded-2xl border border-white/10 bg-gradient-to-br from-neutral-900 to-black">
+              <Image
+                src="/launchops-wave.svg"
+                alt="LaunchOps wave — reduced time to launch"
+                fill
+                priority
+                className="object-contain p-4"
+                sizes="(min-width: 1024px) 520px, 100vw"
+              />
+            </div>
           </div>
         </div>
-      </section>
-    </>
-  );
+      </div>
+    </section>
+  )
 }
-
-// export default function Features() {
-//   const devFeatures = [
-//     "Quickstart: helm/kustomize on your K8s or Cloud Run",
-//     "SDKs/APIs: Python & HTTP; MCP-style tool interfaces",
-//     "Policy engine: pre/post rules, redaction, approvals",
-//     "Receipts & audit: traceable runs (inputs, evidence, costs)",
-//     "ChatBlocks UI: markdown / table / chart / job streaming",
-//     "Multi-LLM router: cost/latency/compliance aware with failover",
-//   ];
-
-//   const appTemplates = [
-//     { title: "RevOps App Template", desc: "Lead discovery, enrichment, CRM sync, dashboards. Start here and customize." },
-//     { title: "Data Analytics App Template", desc: "Sheets→SQL ingestion, governed queries, and charts with receipts." },
-//     { title: "Finance Ops App Template", desc: "QuickBooks→SQL→Metabase sync, cost tracking, reconciliation helpers." },
-//     { title: "Compliance/Research Template", desc: "Web-first answers with citations, golden-set evals, policy approvals." },
-//     { title: "Leasing/Field Ops Template", desc: "Deterministic playbooks with explainable decisions and audit." },
-//     { title: "Education/Health Template", desc: "Task-specific copilots with Decision · Rationale · Citations outputs." },
-//   ];
-
-//   const idpBullets = [
-//     "GitHub Actions → GHCR → Cloud Run/K8s (Argo CD) with GitOps",
-//     "Observability: Prometheus/Grafana, structured logs, tracing",
-//     "Secrets & config via cloud secret manager; per-env promotion",
-//     "Security: SSO/SAML, least-privilege, egress allowlists, CSP",
-//     "Reliability: budgets, rate limits, circuit breakers, health checks",
-//     "Backups/DR and incident runbooks with p95/p99 SLOs",
-//   ];
-
-//   return (
-//     <>
-//       {/* For Developers */}
-//       <section id="developers" className="py-20 bg-gray-50 border-b">
-//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//           <div className="text-center mb-10">
-//             <h2 className="text-3xl font-bold text-gray-900">For Developers</h2>
-//             <p className="mt-4 text-lg text-gray-600">
-//               Build internal AI apps in your cloud with your toolchain—skip the AI plumbing.
-//             </p>
-//           </div>
-//           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-//             {devFeatures.map((f) => (
-//               <div key={f} className="bg-white p-6 rounded-lg shadow-sm border">
-//                 <p className="text-gray-800 text-sm">{f}</p>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* App Templates (examples) */}
-//       <section id="templates" className="py-20 bg-white border-b">
-//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//           <div className="text-center mb-10">
-//             <h2 className="text-3xl font-bold text-gray-900">App Templates (examples)</h2>
-//             <p className="mt-4 text-lg text-gray-600">
-//               Use these as starting points—tailor them to your team’s workflow and policies.
-//             </p>
-//           </div>
-//           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-//             {appTemplates.map((t) => (
-//               <div key={t.title} className="bg-white p-6 rounded-lg shadow-sm border">
-//                 <h3 className="text-lg font-semibold">{t.title}</h3>
-//                 <p className="text-gray-600 mt-2 text-sm">{t.desc}</p>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* IDP (Internal Developer Platform) */}
-//       <section id="idp" className="py-20 bg-gray-50">
-//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//           <div className="text-center mb-10">
-//             <h2 className="text-3xl font-bold text-gray-900">Internal Developer Platform (IDP)</h2>
-//             <p className="mt-4 text-lg text-gray-600">
-//               An example use case is to use LaunchOps as the basis of an <span className="font-semibold">IDP</span> for
-//               DevOps, Platform Engineering, and SRE—so your team ships faster without rebuilding AI plumbing.
-//             </p>
-//           </div>
-//           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-//             {idpBullets.map((b) => (
-//               <div key={b} className="bg-white p-6 rounded-lg shadow-sm border">
-//                 <p className="text-gray-800 text-sm">{b}</p>
-//               </div>
-//             ))}
-//           </div>
-//           <div className="mt-8 text-center">
-//             <a
-//               href="/LaunchOps"
-//               target="_blank"
-//               rel="noopener noreferrer"
-//               className="inline-flex rounded-lg bg-blue-600 text-white px-5 py-3 text-sm font-semibold hover:bg-blue-700"
-//             >
-//               See how LaunchOps powers your IDP ↗
-//             </a>
-//           </div>
-//         </div>
-//       </section>
-//     </>
-//   );
-// }
-
