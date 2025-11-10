@@ -11,7 +11,7 @@ export default function Hero() {
 
           <p className="text-lg md:text-xl mb-8 text-white/90 max-w-3xl mx-auto">
             <Link
-              href="/oneui"
+              href="/launchops"
               className="font-semibold underline decoration-white/30 underline-offset-4 hover:decoration-white"
             >
               LaunchOps →
