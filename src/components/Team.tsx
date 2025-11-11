@@ -10,11 +10,11 @@ function LinkedInIcon(props: React.SVGProps<SVGSVGElement>) {
 }
 
 const team = [
-  { name: 'Luis',   photo: '/team2/Luis.jpg',   title: ['Senior Architect,', 'AI & Cloud Systems Engineer'], linkedin: '#' },
+  { name: 'Luis',   photo: '/team2/Luis.jpg',   title: ['Senior Architect,', 'AI & Cloud Systems Engineer'], linkedin: 'https://www.linkedin.com/in/luis-manalac-300843106/' },
   { name: 'Eric',   photo: '/team2/Eric.jpg',   title: ['AI Researcher', '&  Full-Stack Engineer'], linkedin: '#' },
   { name: 'Victor', photo: '/team2/Victor.jpg', title: [ 'AI & Data Systems Engineer'], linkedin: '#' },
-  { name: 'Nikki',  photo: '/team2/Nikki.jpg',  title: ['Head of Business Development,', 'Partnerships'], linkedin: '#' },
-  { name: 'Hannah', photo: '/team2/Hannah.jpg', title: ['Product Designer,','UI/UX Researcher'], linkedin: '#' },
+  { name: 'Nikki',  photo: '/team2/Nikki.jpg',  title: ['Head of Business Development,', 'Partnerships'], linkedin: 'https://www.linkedin.com/in/nikkibreedveld/' },
+  { name: 'Hannah', photo: '/team2/Hannah.jpg', title: ['Product Designer,','UI/UX Researcher'], linkedin: 'https://www.linkedin.com/in/hannahhallbrown/' },
 ] as const
 
 export default function Team() {
