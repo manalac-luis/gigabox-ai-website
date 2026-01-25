@@ -15,7 +15,8 @@ const ContactForm = () => {
           region: "na1",
           portalId: "49061441",
           formId: "0d521ccb-8401-4d88-8c66-21ccb0c9d7ad",
-          target: '#hubspot-form-container'
+          target: '#hubspot-form-container',
+          locale: 'en-US'
         });
       }
     });
