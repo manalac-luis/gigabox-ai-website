@@ -31,12 +31,12 @@ export default function Home() {
               >
                 View Research
               </Link>
-              <Link
+              <a
                 href="#contact"
                 className="inline-flex items-center px-6 py-3 border border-foreground/20 text-foreground font-medium rounded-lg hover:bg-foreground/5 transition-colors"
               >
                 Get in Touch
-              </Link>
+              </a>
             </div>
           </div>
 

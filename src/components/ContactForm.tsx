@@ -27,7 +27,7 @@ const ContactForm = () => {
   }, []);
 
   return (
-    <section id="contact" className="py-24 bg-white">
+    <section id="contact" className="py-24 bg-white scroll-mt-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-semibold text-center text-foreground mb-4">
           Get in Touch
