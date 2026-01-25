@@ -40,9 +40,13 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Hero visual placeholder */}
-          <div className="mt-16 h-64 md:h-96 rounded-2xl bg-gradient-to-br from-accent/10 via-secondary/5 to-accent/20 flex items-center justify-center">
-            <div className="text-foreground/30 text-sm">Research visualization</div>
+          {/* Hero visual */}
+          <div className="mt-16 relative h-64 md:h-96 rounded-2xl overflow-hidden">
+            <img
+              src="/hero.jpg"
+              alt="AI agents connecting with humans - network visualization"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </section>
