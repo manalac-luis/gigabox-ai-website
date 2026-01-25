@@ -6,18 +6,15 @@ const ContactForm = () => {
     const script = document.createElement('script');
     script.src = 'https://js.hsforms.net/forms/v2.js';
     document.body.appendChild(script);
-/*
-<script src="https://js.hsforms.net/forms/embed/49061441.js" defer></script>
-<div class="hs-form-frame" data-region="na1" data-form-id="0d521ccb-8401-4d88-8c66-21ccb0c9d7ad" data-portal-id="49061441"></div>
-*/
+
     script.addEventListener('load', () => {
       // @ts-expect-error HubSpot types are not available
       if (window.hbspt) {
         // @ts-expect-error HubSpot types are not available
         window.hbspt.forms.create({
-          region: "na1", // Update with your region
-          portalId: "49061441", // Replace with your HubSpot portal ID
-          formId: "0d521ccb-8401-4d88-8c66-21ccb0c9d7ad", // Replace with your form ID
+          region: "na1",
+          portalId: "49061441",
+          formId: "0d521ccb-8401-4d88-8c66-21ccb0c9d7ad",
           target: '#hubspot-form-container'
         });
       }
@@ -29,14 +26,20 @@ const ContactForm = () => {
   }, []);
 
   return (
-    <div id="contact" className="py-24 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Contact Us</h2>
-        <div className="max-w-2xl mx-auto">
+    <section id="contact" className="py-24 bg-white">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center text-foreground mb-4">
+          Get in Touch
+        </h2>
+        <p className="text-center text-foreground/70 mb-8 max-w-2xl mx-auto">
+          Interested in our research or exploring collaboration opportunities?
+          Reach out at <a href="mailto:research@gigaboxresearch.com" className="text-accent hover:underline">research@gigaboxresearch.com</a> or use the form below.
+        </p>
+        <div className="max-w-2xl mx-auto bg-background p-8 rounded-lg border border-foreground/10">
           <div id="hubspot-form-container"></div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
