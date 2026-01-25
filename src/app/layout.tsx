@@ -15,12 +15,21 @@ export const metadata: Metadata = {
     url: 'https://gigaboxresearch.com',
     siteName: 'Gigabox Research',
     type: 'website',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Gigabox Research - AI Agents for Human Expertise',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Gigabox Research | AI Agents for Human Expertise',
     description:
       'Building AI agents that democratize access to expert knowledge. We research and develop conversational AI systems that bring specialized human expertise to everyone.',
+    images: ['/og-image.jpg'],
   },
 }
 
