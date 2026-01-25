@@ -34,7 +34,7 @@ const ContactForm = () => {
         </h2>
         <p className="text-center text-foreground/70 mb-8 max-w-2xl mx-auto">
           Interested in our research or exploring collaboration opportunities?
-          Reach out at <a href="mailto:research@gigaboxresearch.com" className="text-accent hover:underline">research@gigaboxresearch.com</a> or use the form below.
+          Reach out at <a href="mailto:research@gigabox.ai" className="text-accent hover:underline">research@gigabox.ai</a> or use the form below.
         </p>
         <div className="max-w-2xl mx-auto bg-background p-8 rounded-lg border border-foreground/10">
           <div id="hubspot-form-container"></div>
