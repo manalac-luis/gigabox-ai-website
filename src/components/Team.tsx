@@ -10,21 +10,21 @@ function LinkedInIcon(props: React.SVGProps<SVGSVGElement>) {
 }
 
 const team = [
-  { name: 'Luis',   photo: '/team2/Luis.jpg',   title: ['Senior Architect,', 'AI & Cloud Systems Engineer'], linkedin: 'https://www.linkedin.com/in/luis-manalac-300843106/' },
-  { name: 'Eric',   photo: '/team2/Eric.jpg',   title: ['AI Researcher', '&  Full-Stack Engineer'], linkedin: '#' },
-  { name: 'Victor', photo: '/team2/Victor.jpg', title: [ 'AI & Data Systems Engineer'], linkedin: '#' },
-  { name: 'Nikki',  photo: '/team2/Nikki.jpg',  title: ['Head of Business Development,', 'Partnerships'], linkedin: 'https://www.linkedin.com/in/nikkibreedveld/' },
-  { name: 'Hannah', photo: '/team2/Hannah.jpg', title: ['Product Designer,','UI/UX Researcher'], linkedin: 'https://www.linkedin.com/in/hannahhallbrown/' },
+  { name: 'Luis',   photo: '/team2/Luis.jpg',   title: 'Architecture & Systems', linkedin: 'https://www.linkedin.com/in/luis-manalac-300843106/' },
+  { name: 'Eric',   photo: '/team2/Eric.jpg',   title: 'AI & Engineering', linkedin: '#' },
+  { name: 'Victor', photo: '/team2/Victor.jpg', title: 'Data & Infrastructure', linkedin: '#' },
+  { name: 'Nikki',  photo: '/team2/Nikki.jpg',  title: 'Partnerships', linkedin: 'https://www.linkedin.com/in/nikkibreedveld/' },
+  { name: 'Hannah', photo: '/team2/Hannah.jpg', title: 'Design & UX', linkedin: 'https://www.linkedin.com/in/hannahhallbrown/' },
 ] as const
 
 export default function Team() {
   return (
-    <section id="team" className="bg-background">
+    <section id="team" className="bg-background scroll-mt-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
         <h2 className="text-center text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
           OUR TEAM
         </h2>
-        <p className="mt-3 text-center text-foreground/70 text-lg">Researchers and engineers building the future of AI agents.</p>
+        <p className="mt-3 text-center text-foreground/70 text-lg">The humans who design.</p>
 
         <div className="mt-14 grid items-stretch gap-10 sm:grid-cols-2 lg:grid-cols-5">
           {team.map((m) => (
@@ -40,10 +40,8 @@ export default function Team() {
                 />
               </div>
               <div className="mt-4 font-semibold text-lg text-foreground">{m.name}</div>
-              <div className="mt-2 text-sm text-foreground/70 leading-relaxed min-h-[3.75rem]">
-                {m.title.map((line, i) => (
-                  <div key={i}>{line}</div>
-                ))}
+              <div className="mt-2 text-sm text-foreground/70 leading-relaxed">
+                {m.title}
               </div>
               <Link
                 href={m.linkedin}

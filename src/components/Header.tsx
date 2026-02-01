@@ -7,9 +7,10 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { href: '/research', label: 'Research' },
-    { href: '/platform', label: 'Platform' },
-    { href: '/approach', label: 'Approach' },
+    { href: '#aura', label: 'Aura' },
+    { href: '#platform', label: 'Platform' },
+    { href: '#research', label: 'Research' },
+    { href: '#team', label: 'Team' },
     { href: '#contact', label: 'Contact' },
   ];
 
@@ -18,7 +19,7 @@ export default function Header() {
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="text-lg font-semibold tracking-tight text-foreground">
-            GIGABOX RESEARCH
+            GIGABOX
           </Link>
 
           {/* Desktop nav */}

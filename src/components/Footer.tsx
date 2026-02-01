@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-sm text-background/70">
-            &copy; 2026 Gigabox Research. All rights reserved.
+            &copy; 2026 Gigabox. All rights reserved.
           </div>
           <div className="flex items-center gap-6">
             <Link
