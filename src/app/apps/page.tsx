@@ -29,15 +29,6 @@ const apps: AppCard[] = [
   },
   {
     slug: null,
-    name: 'Aura',
-    tagline: 'AI companions for life',
-    description:
-      'Persistent, proactive AI companions across global concierge, language learning, life coaching, and more.',
-    status: 'coming-soon',
-    href: null,
-  },
-  {
-    slug: null,
     name: 'More to come',
     tagline: 'New verticals shipping soon',
     description:
