@@ -4,29 +4,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect } from 'react';
 
-const agents = [
+const apps = [
   {
-    name: 'Luna',
-    role: 'Global Concierge',
-    quote: '"She found a Michelin spot 1.5 blocks away. She knew I was with H."',
+    name: 'Gigabox EHR',
+    tagline: 'AI-native electronic health records.',
+    description:
+      'A complete patient portal, scheduling, telehealth, lab orders, prescriptions, and AI-generated visit summaries — running in production on web and iOS.',
+    status: 'Live',
+    href: '/apps/ehr',
   },
-  {
-    name: 'Sofia',
-    role: 'Language Teacher',
-    quote: '"She remembers my mistakes better than any teacher."',
-  },
-  {
-    name: 'Alex',
-    role: 'Life Coach',
-    quote: '"Available at 3am. Actually wants me to get better."',
-  },
-];
-
-const platformItems = [
-  { title: 'Code', detail: '100% AI.' },
-  { title: 'Review', detail: 'Human + AI.' },
-  { title: 'Deploy', detail: '100% AI.' },
-  { title: 'Monitor', detail: '100% AI.' },
 ];
 
 const quotes = [
@@ -128,13 +114,18 @@ export default function Home() {
               GIGABOX
             </Link>
             <div className="hidden md:flex items-center gap-8">
-              {['Aura', 'Platform', 'Research', 'Team', 'Contact'].map((item) => (
+              {[
+                { label: 'Apps', href: '/apps' },
+                { label: 'Research', href: '#research' },
+                { label: 'Team', href: '#team' },
+                { label: 'Contact', href: '#contact' },
+              ].map((item) => (
                 <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
+                  key={item.label}
+                  href={item.href}
                   className="text-sm text-black/60 hover:text-black transition-colors"
                 >
-                  {item}
+                  {item.label}
                 </a>
               ))}
             </div>
@@ -157,12 +148,12 @@ export default function Home() {
               Our products are the proof.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a
-                href="#aura"
+              <Link
+                href="/apps"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6] text-white font-semibold rounded-lg hover:opacity-90 transition-opacity"
               >
-                Meet Aura
-              </a>
+                See Our Apps
+              </Link>
               <a
                 href="#research"
                 className="inline-flex items-center px-8 py-4 border-2 border-[#3b82f6] text-[#3b82f6] font-semibold rounded-lg hover:bg-[#3b82f6] hover:text-white transition-all"
@@ -185,74 +176,66 @@ export default function Home() {
 
       {/* === DARK SECTIONS START === */}
 
-      {/* Aura Section - Dark */}
-      <section id="aura" className="py-24 bg-[#0a0a0a] scroll-mt-20">
+      {/* Apps Section - Dark */}
+      <section id="apps" className="py-24 bg-[#0a0a0a] scroll-mt-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6] bg-clip-text text-transparent">Aura</span>
+              <span className="bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6] bg-clip-text text-transparent">Our Apps</span>
             </h2>
             <p className="text-xl md:text-2xl text-white/60">
-              AI companions for life.
+              Production software, built and operated by AI.
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3">
-            {agents.map((agent) => (
-              <div key={agent.name} className="bg-[#111111] p-8 rounded-xl border border-white/10">
-                <div className="mb-4">
-                  <span className="text-2xl font-semibold bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6] bg-clip-text text-transparent">{agent.name}</span>
-                  <span className="text-white/40 mx-2">—</span>
-                  <span className="text-white/60">{agent.role}</span>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {apps.map((app) => (
+              <Link
+                key={app.name}
+                href={app.href}
+                className="block bg-[#111111] p-8 rounded-xl border border-white/10 hover:border-white/30 transition-colors"
+              >
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-2xl font-semibold text-white">{app.name}</span>
+                  <span className="inline-flex items-center gap-2 text-xs text-white/60">
+                    <span className="w-2 h-2 rounded-full bg-green-500"></span>
+                    {app.status}
+                  </span>
                 </div>
-                <p className="text-white/70 italic leading-relaxed">
-                  {agent.quote}
+                <p className="text-base font-medium bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6] bg-clip-text text-transparent mb-4">
+                  {app.tagline}
                 </p>
-              </div>
+                <p className="text-white/60 leading-relaxed mb-6">
+                  {app.description}
+                </p>
+                <span className="inline-flex items-center text-white/80 font-medium">
+                  Learn more
+                  <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                  </svg>
+                </span>
+              </Link>
             ))}
+
+            <div className="bg-[#111111] p-8 rounded-xl border border-dashed border-white/10 flex items-center justify-center text-center">
+              <div>
+                <p className="text-white/60 mb-1">More verticals in development.</p>
+                <p className="text-sm text-white/40">Same methodology, different domains.</p>
+              </div>
+            </div>
           </div>
 
           <div className="mt-12 text-center">
-            <a
-              href="#"
+            <Link
+              href="/apps"
               className="inline-flex items-center px-8 py-4 bg-white text-[#0a0a0a] font-semibold rounded-lg hover:bg-white/90 transition-colors"
             >
-              <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              View all apps
+              <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
               </svg>
-              Download on App Store
-            </a>
+            </Link>
           </div>
-        </div>
-      </section>
-
-      {/* Platform Section - Slightly lighter dark */}
-      <section id="platform" className="py-24 bg-[#111111] scroll-mt-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              The Gigabox OneUI Platform
-            </h2>
-            <p className="text-xl md:text-2xl text-white/60 mb-2">
-              This is how we build.
-            </p>
-            <p className="text-lg text-white/40">
-              Humans design.<br />AI builds everything else.
-            </p>
-          </div>
-
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-4xl mx-auto">
-            {platformItems.map((item) => (
-              <div key={item.title} className="bg-[#0a0a0a] p-6 rounded-xl border border-white/10 text-center">
-                <h3 className="text-xl font-semibold text-white mb-1">{item.title}</h3>
-                <p className="text-white/60">{item.detail}</p>
-              </div>
-            ))}
-          </div>
-
-          <p className="mt-12 text-center text-lg text-white/60">
-            <span className="font-semibold bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6] bg-clip-text text-transparent">Aura was built this way.</span>
-          </p>
         </div>
       </section>
 
