@@ -98,8 +98,13 @@ export default function EHRLandingPage() {
       {/* Hero */}
       <section className="pt-24 pb-16 border-b border-foreground/5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-sm text-accent uppercase tracking-wider mb-4">
-            Gigabox Apps · EHR
+          <div className="flex items-center gap-3 mb-4">
+            <span className="text-sm text-accent uppercase tracking-wider">
+              Gigabox Apps · EHR
+            </span>
+            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-amber-100 text-amber-800 border border-amber-200">
+              Beta
+            </span>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
             AI-native electronic health records.
@@ -111,8 +116,17 @@ export default function EHRLandingPage() {
             AI-generated visit summaries — all in one app.
           </p>
 
-          <div className="text-sm font-semibold text-foreground/60 uppercase tracking-wider mb-4">
+          <div className="text-sm font-semibold text-foreground/60 uppercase tracking-wider mb-3">
             Available on the web and iOS
+          </div>
+
+          <div className="mb-6">
+            <Link
+              href="https://ehr.gigabox.ai"
+              className="inline-block text-3xl md:text-4xl font-bold text-accent hover:text-accent/80 transition-colors underline underline-offset-4 decoration-2"
+            >
+              ehr.gigabox.ai
+            </Link>
           </div>
 
           <div className="flex flex-wrap gap-4 mb-12">
@@ -312,8 +326,7 @@ export default function EHRLandingPage() {
             See it in action
           </h2>
           <p className="text-lg text-foreground/70 max-w-3xl mb-12">
-            A look at the native iOS patient app. (Preview build — screens and
-            copy will evolve before the App Store launch.)
+            A look at the native iOS patient app.
           </p>
 
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
