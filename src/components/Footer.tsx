@@ -10,6 +10,12 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-6">
             <Link
+              href="/apps"
+              className="text-sm text-background/70 hover:text-background transition-colors"
+            >
+              Apps
+            </Link>
+            <Link
               href="/privacy"
               className="text-sm text-background/70 hover:text-background transition-colors"
             >

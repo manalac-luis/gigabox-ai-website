@@ -407,6 +407,9 @@ export default function Home() {
               &copy; 2026 Gigabox. All rights reserved.
             </div>
             <div className="flex items-center gap-6">
+              <Link href="/apps" className="text-sm text-white/50 hover:text-white transition-colors">
+                Apps
+              </Link>
               <Link href="/privacy" className="text-sm text-white/50 hover:text-white transition-colors">
                 Privacy
               </Link>
