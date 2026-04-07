@@ -116,27 +116,17 @@ export default function EHRLandingPage() {
             AI-generated visit summaries — all in one app.
           </p>
 
-          <div className="text-sm font-semibold text-foreground/60 uppercase tracking-wider mb-3">
+          <div className="text-sm font-semibold text-foreground/60 uppercase tracking-wider mb-4">
             Available on the web and iOS
           </div>
 
-          <div className="mb-6">
+          <div className="flex flex-wrap gap-4 mb-4">
             <Link
               href="https://ehr.gigabox.ai"
-              className="inline-block text-3xl md:text-4xl font-bold text-accent hover:text-accent/80 transition-colors underline underline-offset-4 decoration-2"
+              className="inline-flex items-center justify-center min-w-[220px] px-6 py-3 bg-accent text-white font-semibold rounded-lg hover:bg-accent/90 transition-colors"
             >
-              ehr.gigabox.ai
-            </Link>
-          </div>
-
-          <div className="flex flex-wrap gap-4 mb-12">
-            <Link
-              href="https://ehr.gigabox.ai"
-              className="inline-flex items-center px-6 py-3 bg-accent text-white font-semibold rounded-lg hover:bg-accent/90 transition-colors"
-            >
-              Open the web app
               <svg
-                className="w-4 h-4 ml-2"
+                className="w-5 h-5 mr-2"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={2}
@@ -145,24 +135,31 @@ export default function EHRLandingPage() {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                  d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
                 />
               </svg>
+              Go to the Web EHR
             </Link>
             <a
               href="mailto:info@gigabox.ai?subject=Gigabox%20EHR%20TestFlight%20access"
-              className="inline-flex items-center px-6 py-3 border-2 border-accent text-accent font-semibold rounded-lg hover:bg-accent hover:text-white transition-all"
+              className="inline-flex items-center justify-center min-w-[220px] px-6 py-3 border-2 border-accent text-accent font-semibold rounded-lg hover:bg-accent hover:text-white transition-all"
             >
-              Get the iOS app
               <svg
-                className="w-4 h-4 ml-2"
+                className="w-5 h-5 mr-2"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
               >
                 <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
               </svg>
+              Get the iOS app
             </a>
+          </div>
+
+          <div className="text-sm text-foreground/50 mb-12">
+            <span className="font-mono">ehr.gigabox.ai</span>
+            <span className="mx-2">·</span>
+            <span>iOS via TestFlight</span>
           </div>
 
           <div className="inline-flex items-start gap-3 p-4 bg-amber-50 border border-amber-200 rounded-lg max-w-3xl">
