@@ -430,6 +430,12 @@ export default function EHRLandingPage() {
             >
               Support
             </Link>
+            <Link
+              href="/apps/ehr/compliance"
+              className="text-accent hover:text-accent/80 underline underline-offset-4"
+            >
+              App Store Compliance
+            </Link>
             <a
               href="mailto:info@gigabox.ai"
               className="text-accent hover:text-accent/80 underline underline-offset-4"
