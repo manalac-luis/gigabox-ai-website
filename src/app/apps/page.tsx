@@ -28,6 +28,15 @@ const apps: AppCard[] = [
     href: '/apps/ehr',
   },
   {
+    slug: 'openclaw',
+    name: 'OpenClaw',
+    tagline: 'Managed AI agents',
+    description:
+      'A dedicated AI assistant on your own subdomain — hosted, monitored, and backed up. Persistent memory, private chat interface, and spend controls included.',
+    status: 'live',
+    href: 'https://openclaw.gigabox.ai',
+  },
+  {
     slug: null,
     name: 'More to come',
     tagline: 'New verticals shipping soon',
@@ -103,10 +112,17 @@ export default function AppsPage() {
                   )}
                 </div>
               );
+              const isExternal = app.href?.startsWith('http');
               return app.href ? (
-                <Link key={app.name} href={app.href} className="block">
-                  {card}
-                </Link>
+                isExternal ? (
+                  <a key={app.name} href={app.href} className="block" target="_blank" rel="noopener noreferrer">
+                    {card}
+                  </a>
+                ) : (
+                  <Link key={app.name} href={app.href} className="block">
+                    {card}
+                  </Link>
+                )
               ) : (
                 <div key={app.name}>{card}</div>
               );
