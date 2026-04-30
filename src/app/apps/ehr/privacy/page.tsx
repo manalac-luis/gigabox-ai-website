@@ -26,10 +26,10 @@ export default function EHRPrivacyPage() {
               Gigabox EHR mobile application (the &ldquo;App&rdquo;) and the related web
               application at{' '}
               <a
-                href="https://ehr.gigabox.ai"
+                href="https://praxis.gigabox.ai"
                 className="text-accent hover:text-accent/80"
               >
-                ehr.gigabox.ai
+                praxis.gigabox.ai
               </a>{' '}
               (collectively, &ldquo;EHR&rdquo;). EHR is operated by Gigabox.
             </p>

@@ -63,7 +63,7 @@ const faqs = [
 
 const status = [
   { service: 'Mobile app (iOS)', state: 'Live on TestFlight' },
-  { service: 'Web app (ehr.gigabox.ai)', state: 'Live' },
+  { service: 'Web app (praxis.gigabox.ai)', state: 'Live' },
   { service: 'API', state: 'Live' },
   { service: 'Push notifications', state: 'Live' },
 ];

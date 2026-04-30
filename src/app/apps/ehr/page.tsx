@@ -122,7 +122,7 @@ export default function EHRLandingPage() {
 
           <div className="flex flex-wrap gap-4 mb-4">
             <Link
-              href="https://ehr.gigabox.ai"
+              href="https://praxis.gigabox.ai"
               className="inline-flex items-center justify-center min-w-[220px] px-6 py-3 bg-accent text-white font-semibold rounded-lg hover:bg-accent/90 transition-colors"
             >
               <svg
@@ -157,7 +157,7 @@ export default function EHRLandingPage() {
           </div>
 
           <div className="text-sm text-foreground/50 mb-12">
-            <span className="font-mono">ehr.gigabox.ai</span>
+            <span className="font-mono">praxis.gigabox.ai</span>
             <span className="mx-2">·</span>
             <span>iOS via TestFlight</span>
           </div>
@@ -220,7 +220,7 @@ export default function EHRLandingPage() {
                     Web app
                   </div>
                   <div className="text-xl font-semibold text-foreground">
-                    ehr.gigabox.ai
+                    praxis.gigabox.ai
                   </div>
                 </div>
               </div>
@@ -230,10 +230,10 @@ export default function EHRLandingPage() {
                 browser on desktop, tablet, or phone.
               </p>
               <Link
-                href="https://ehr.gigabox.ai"
+                href="https://praxis.gigabox.ai"
                 className="inline-flex items-center justify-center px-5 py-2.5 bg-accent text-white text-sm font-semibold rounded-lg hover:bg-accent/90 transition-colors"
               >
-                Open ehr.gigabox.ai
+                Open praxis.gigabox.ai
                 <svg
                   className="w-4 h-4 ml-2"
                   fill="none"

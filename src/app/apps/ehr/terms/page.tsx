@@ -25,10 +25,10 @@ export default function EHRTermsPage() {
               These Terms of Service (&ldquo;Terms&rdquo;) govern your use of the Gigabox
               EHR mobile application and the related web application at{' '}
               <a
-                href="https://ehr.gigabox.ai"
+                href="https://praxis.gigabox.ai"
                 className="text-accent hover:text-accent/80"
               >
-                ehr.gigabox.ai
+                praxis.gigabox.ai
               </a>{' '}
               (collectively, &ldquo;EHR&rdquo;). By using EHR, you agree to these Terms.
             </p>
