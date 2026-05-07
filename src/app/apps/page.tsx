@@ -19,6 +19,15 @@ type AppCard = {
 
 const apps: AppCard[] = [
   {
+    slug: 'sovereign',
+    name: 'Sovereign',
+    tagline: 'Self-hosted AI inference platform',
+    description:
+      'GPU-first LLM inference with transparent cloud fallback. Self-hosted DeepSeek V4 Flash on H200 GPUs via RunPod, with an OpenAI-compatible API, usage tracking, and per-key billing.',
+    status: 'live',
+    href: '/apps/sovereign',
+  },
+  {
     slug: 'ehr',
     name: 'Praxis',
     tagline: 'AI-native practice management & EHR',

@@ -17,6 +17,21 @@ type System = {
 
 const systems: System[] = [
   {
+    name: 'Sovereign',
+    description: 'Self-hosted AI inference platform. GPU-first routing with transparent OpenRouter fallback.',
+    status: 'live',
+    url: 'https://sovereign.gigabox.ai',
+    details: [
+      'OpenAI-compatible proxy (FastAPI, port 8400)',
+      '2x NVIDIA H200 SXM on RunPod ($7.98/hr)',
+      'DeepSeek V4 Flash (284B MoE, vLLM 0.20)',
+      'Transparent fallback to OpenRouter',
+      'API key auth (sv- prefix) + usage tracking',
+      '~10 tok/s sequential, ~36 tok/s concurrent',
+      'VM: openclaw-prod (shared)',
+    ],
+  },
+  {
     name: 'Praxis (EHR)',
     description: 'Multi-tenant clinical practice management with AI-native EHR.',
     status: 'beta',
@@ -100,7 +115,8 @@ const infrastructure = [
   { resource: 'Artifact Registry', value: 'us-central1-docker.pkg.dev/gigabox-dev/axiom-prod-containers/' },
   { resource: 'DNS', value: 'Cloud DNS zones on gigabox-dev + aerial-venture' },
   { resource: 'Auth', value: 'Clerk (3 projects: EHR, Praxis, OpenClaw/Hermes)' },
-  { resource: 'AI', value: 'DeepSeek V4 Flash via OpenRouter (all systems)' },
+  { resource: 'GPU (RunPod)', value: '2x H200 SXM pod, vLLM 0.20, DeepSeek V4 Flash' },
+  { resource: 'AI', value: 'DeepSeek V4 Flash — self-hosted (Sovereign) + OpenRouter (fallback)' },
 ];
 
 const liveUrls = [
@@ -108,6 +124,7 @@ const liveUrls = [
   { name: 'Praxis (EHR Dashboard)', url: 'https://ehr.gigabox.ai' },
   { name: 'OpenClaw Dashboard', url: 'https://openclaw.gigabox.ai' },
   { name: 'Hermes Dashboard', url: 'https://hermes.gigabox.ai' },
+  { name: 'Sovereign API', url: 'https://sovereign.gigabox.ai/health' },
   { name: 'Adology API', url: 'https://api-gateway.gigabox.ai/healthz' },
   { name: 'Adology Dashboard', url: 'https://ad.gigabox.ai' },
   { name: 'Sentinel', url: 'https://sentinel.gigabox.ai' },

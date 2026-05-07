@@ -72,6 +72,7 @@ public/
 | `/research/[slug]` | Individual paper (4 papers currently) |
 | `/platform` | Axiom platform capabilities |
 | `/approach` | 5 research principles |
+| `/apps/sovereign` | Sovereign inference platform landing page |
 | `/privacy` | Privacy policy |
 | `/terms` | Terms of service |
 
