@@ -100,7 +100,7 @@ export default function EHRLandingPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-4">
             <span className="text-sm text-accent uppercase tracking-wider">
-              Gigabox Apps · EHR
+              Gigabox Apps · Praxis
             </span>
             <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-amber-100 text-amber-800 border border-amber-200">
               Beta
