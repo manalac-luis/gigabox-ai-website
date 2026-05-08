@@ -72,7 +72,14 @@ public/
 | `/research/[slug]` | Individual paper (4 papers currently) |
 | `/platform` | Axiom platform capabilities |
 | `/approach` | 5 research principles |
+| `/apps` | Apps catalog (5 cards) |
 | `/apps/sovereign` | Sovereign inference platform landing page |
+| `/apps/ehr` | Praxis EHR landing page |
+| `/apps/openclaw` | OpenClaw managed AI agents landing page |
+| `/apps/hermes` | Hermes autonomous AI agents landing page |
+| `/apps/n8n` | n8n managed workflow automation landing page |
+| `/apps/n8n/request` | n8n instance request form (name + email → Resend) |
+| `/api/contact` | POST — contact/request form handler (Resend email to info@gigabox.ai) |
 | `/privacy` | Privacy policy |
 | `/terms` | Terms of service |
 
