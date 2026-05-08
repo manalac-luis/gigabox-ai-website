@@ -54,6 +54,15 @@ const apps: AppCard[] = [
     status: 'live',
     href: '/apps/hermes',
   },
+  {
+    slug: 'n8n',
+    name: 'n8n',
+    tagline: 'Managed workflow automation',
+    description:
+      'Your own n8n instance on a dedicated subdomain with per-tenant Postgres, WebSocket editor, 400+ integrations, and zero infrastructure to manage.',
+    status: 'live',
+    href: '/apps/n8n',
+  },
 ];
 
 const statusBadge: Record<AppCard['status'], { label: string; classes: string }> = {
