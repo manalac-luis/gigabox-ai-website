@@ -10,7 +10,7 @@ export const metadata = {
 type System = {
   name: string;
   description: string;
-  status: 'live' | 'beta' | 'deployed' | 'hibernated';
+  status: 'live' | 'beta' | 'deployed';
   url: string | null;
   details: string[];
 };
@@ -23,11 +23,10 @@ const systems: System[] = [
     url: 'https://sovereign.gigabox.ai',
     details: [
       'OpenAI-compatible proxy (FastAPI, port 8400)',
-      '2x NVIDIA H200 SXM on RunPod ($7.98/hr)',
-      'DeepSeek V4 Flash (284B MoE, vLLM 0.20)',
-      'Transparent fallback to OpenRouter',
+      'RunPod GPU on-demand (2x H200 SXM, not running)',
+      'DeepSeek V4 Flash (284B MoE, vLLM)',
+      'Transparent fallback to OpenRouter when GPU pod is off',
       'API key auth (sv- prefix) + usage tracking',
-      '~10 tok/s sequential, ~36 tok/s concurrent',
       'VM: openclaw-prod (shared)',
     ],
   },
@@ -76,6 +75,36 @@ const systems: System[] = [
     ],
   },
   {
+    name: 'n8n Hosted',
+    description: 'Managed multi-tenant workflow automation. Each customer gets their own subdomain with per-tenant Postgres.',
+    status: 'live',
+    url: 'https://n8n.gigabox.ai',
+    details: [
+      'n8n 2.19.5 (Node.js)',
+      'Per-instance Postgres DB on Cloud SQL',
+      'n8n built-in auth (email + password)',
+      'nginx reverse proxy + WebSocket + wildcard SSL',
+      'systemd per-instance isolation (512MB MemoryMax)',
+      '400+ integrations + webhook triggers',
+      'VM: openclaw-prod (shared)',
+    ],
+  },
+  {
+    name: 'ComfyUI Hosted',
+    description: 'Managed multi-tenant AI image/video generation. Node-based workflows with fal.ai cloud inference.',
+    status: 'live',
+    url: 'https://comfyui.gigabox.ai',
+    details: [
+      'ComfyUI (Python 3.12, CPU-only PyTorch)',
+      'fal.ai cloud inference (Flux, SDXL, Kling, etc.)',
+      'nginx basic_auth (per-instance htpasswd)',
+      'nginx reverse proxy + WebSocket + wildcard SSL',
+      'systemd per-instance isolation (512MB MemoryMax)',
+      'ComfyUI-fal-API custom nodes pre-installed',
+      'VM: openclaw-prod (shared)',
+    ],
+  },
+  {
     name: 'OpenClaw Bot',
     description: 'Multi-tenant Telegram bot with SQL conversation history and Clerk identity.',
     status: 'live',
@@ -90,33 +119,18 @@ const systems: System[] = [
       'VM: openclaw-prod',
     ],
   },
-  {
-    name: 'Adology',
-    description: 'Ad intelligence platform — MongoDB fully removed, running on Postgres.',
-    status: 'hibernated',
-    url: 'https://api-gateway.gigabox.ai',
-    details: [
-      'Node.js monorepo (ESM, TypeScript)',
-      'GKE Autopilot (adology namespace)',
-      'Cloud SQL (adology DB, v24 migrations)',
-      'MongoDB fully removed (Phase 5 complete)',
-      'BullMQ + Redis for job queues',
-      'DeepSeek for AI labeling pipeline',
-      'Image: adology-backend-dev:v1.34.0',
-    ],
-  },
 ];
 
 const infrastructure = [
   { resource: 'GKE Cluster', value: 'axiom-prod-cluster (Autopilot, us-central1)' },
   { resource: 'Cloud SQL', value: 'axiom-prod-postgres (PG16, db-custom-2-8192)' },
-  { resource: 'VM', value: 'openclaw-prod (e2-standard-2, us-central1-a)' },
-  { resource: 'K8s Namespaces', value: 'adology, praxis, vye-demo' },
+  { resource: 'VM', value: 'openclaw-prod (e2-standard-2, us-central1-a) — OC, Hermes, n8n, ComfyUI, Sovereign, Bot' },
+  { resource: 'K8s Namespaces', value: 'praxis, vye-demo' },
   { resource: 'Artifact Registry', value: 'us-central1-docker.pkg.dev/gigabox-dev/axiom-prod-containers/' },
-  { resource: 'DNS', value: 'Cloud DNS zones on gigabox-dev + aerial-venture' },
-  { resource: 'Auth', value: 'Clerk (3 projects: EHR, Praxis, OpenClaw/Hermes)' },
-  { resource: 'GPU (RunPod)', value: '2x H200 SXM pod, vLLM 0.20, DeepSeek V4 Flash' },
-  { resource: 'AI', value: 'DeepSeek V4 Flash — self-hosted (Sovereign) + OpenRouter (fallback)' },
+  { resource: 'DNS', value: 'Cloud DNS zones: praxis, openclaw, hermes, n8n, comfyui, sovereign, sentinel' },
+  { resource: 'Auth', value: 'Clerk (3 projects: EHR, Praxis, OpenClaw/Hermes) + nginx basic_auth (ComfyUI) + n8n built-in' },
+  { resource: 'GPU (RunPod)', value: 'On-demand H200 SXM pods for Sovereign (created as needed)' },
+  { resource: 'AI Inference', value: 'DeepSeek V4 Flash — Sovereign (self-hosted) + OpenRouter (fallback) + fal.ai (ComfyUI)' },
 ];
 
 const liveUrls = [
@@ -124,9 +138,9 @@ const liveUrls = [
   { name: 'Praxis (EHR Dashboard)', url: 'https://ehr.gigabox.ai' },
   { name: 'OpenClaw Dashboard', url: 'https://openclaw.gigabox.ai' },
   { name: 'Hermes Dashboard', url: 'https://hermes.gigabox.ai' },
+  { name: 'n8n Platform', url: 'https://n8n.gigabox.ai/health' },
+  { name: 'ComfyUI Platform', url: 'https://comfyui.gigabox.ai/health' },
   { name: 'Sovereign API', url: 'https://sovereign.gigabox.ai/health' },
-  { name: 'Adology API', url: 'https://api-gateway.gigabox.ai/healthz' },
-  { name: 'Adology Dashboard', url: 'https://ad.gigabox.ai' },
   { name: 'Sentinel', url: 'https://sentinel.gigabox.ai' },
   { name: 'Gigabox Website', url: 'https://www.gigabox.ai' },
 ];
@@ -143,10 +157,6 @@ const statusBadge: Record<System['status'], { label: string; classes: string }> 
   deployed: {
     label: 'Deployed',
     classes: 'bg-emerald-100 text-emerald-800 border-emerald-200',
-  },
-  hibernated: {
-    label: 'Hibernated',
-    classes: 'bg-amber-100 text-amber-800 border-amber-200',
   },
 };
 
