@@ -72,6 +72,15 @@ const apps: AppCard[] = [
     status: 'live',
     href: '/apps/comfyui',
   },
+  {
+    slug: 'maic',
+    name: 'OpenMAIC',
+    tagline: 'Interactive AI classrooms',
+    description:
+      'Upload a PDF or describe a topic — OpenMAIC generates a multi-agent classroom with AI teachers, animated slides, 3D simulations, quizzes, whiteboards, and mind maps.',
+    status: 'live',
+    href: '/apps/maic',
+  },
 ];
 
 const statusBadge: Record<AppCard['status'], { label: string; classes: string }> = {

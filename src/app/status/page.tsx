@@ -105,6 +105,21 @@ const systems: System[] = [
     ],
   },
   {
+    name: 'OpenMAIC Hosted',
+    description: 'Managed multi-tenant interactive AI classrooms. AI-generated lessons with slides, quizzes, whiteboards, and simulations.',
+    status: 'live',
+    url: 'https://maic.gigabox.ai',
+    details: [
+      'OpenMAIC (Next.js 16, Node.js 22 standalone)',
+      'DeepSeek V4 Flash via Sovereign',
+      'Built-in access code auth (per-instance)',
+      'nginx reverse proxy + WebSocket + wildcard SSL',
+      'systemd per-instance isolation (768MB MemoryMax)',
+      'File-based JSON storage (classrooms + jobs)',
+      'VM: openclaw-prod (shared)',
+    ],
+  },
+  {
     name: 'OpenClaw Bot',
     description: 'Multi-tenant Telegram bot with SQL conversation history and Clerk identity.',
     status: 'live',
@@ -124,11 +139,11 @@ const systems: System[] = [
 const infrastructure = [
   { resource: 'GKE Cluster', value: 'axiom-prod-cluster (Autopilot, us-central1)' },
   { resource: 'Cloud SQL', value: 'axiom-prod-postgres (PG16, db-custom-2-8192)' },
-  { resource: 'VM', value: 'openclaw-prod (e2-standard-2, us-central1-a) — OC, Hermes, n8n, ComfyUI, Sovereign, Bot' },
+  { resource: 'VM', value: 'openclaw-prod (e2-standard-2, us-central1-a) — OC, Hermes, n8n, ComfyUI, OpenMAIC, Sovereign, Bot' },
   { resource: 'K8s Namespaces', value: 'praxis, vye-demo' },
   { resource: 'Artifact Registry', value: 'us-central1-docker.pkg.dev/gigabox-dev/axiom-prod-containers/' },
-  { resource: 'DNS', value: 'Cloud DNS zones: praxis, openclaw, hermes, n8n, comfyui, sovereign' },
-  { resource: 'Auth', value: 'Clerk (3 projects: EHR, Praxis, OpenClaw/Hermes) + nginx basic_auth (ComfyUI) + n8n built-in' },
+  { resource: 'DNS', value: 'Cloud DNS zones: praxis, openclaw, hermes, n8n, comfyui, maic, sovereign' },
+  { resource: 'Auth', value: 'Clerk (3 projects: EHR, Praxis, OpenClaw/Hermes) + nginx basic_auth (ComfyUI) + n8n built-in + access code (OpenMAIC)' },
   { resource: 'GPU (RunPod)', value: 'On-demand H200 SXM pods for Sovereign (created as needed)' },
   { resource: 'AI Inference', value: 'DeepSeek V4 Flash — Sovereign (self-hosted) + OpenRouter (fallback) + fal.ai (ComfyUI)' },
 ];
@@ -139,6 +154,7 @@ const liveUrls = [
   { name: 'Hermes Dashboard', url: 'https://hermes.gigabox.ai' },
   { name: 'n8n Platform', url: 'https://n8n.gigabox.ai/health' },
   { name: 'ComfyUI Platform', url: 'https://comfyui.gigabox.ai/health' },
+  { name: 'OpenMAIC Platform', url: 'https://maic.gigabox.ai/health' },
   { name: 'Sovereign API', url: 'https://sovereign.gigabox.ai/health' },
   { name: 'Gigabox Website', url: 'https://www.gigabox.ai' },
 ];

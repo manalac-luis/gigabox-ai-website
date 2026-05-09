@@ -81,6 +81,8 @@ public/
 | `/apps/n8n/request` | n8n instance request form (name + email → Resend) |
 | `/apps/comfyui` | ComfyUI AI image/video generation landing page |
 | `/apps/comfyui/request` | ComfyUI instance request form (name + email → Resend) |
+| `/apps/maic` | OpenMAIC interactive AI classrooms landing page |
+| `/apps/maic/request` | OpenMAIC instance request form (name + email → Resend) |
 | `/api/contact` | POST — contact/request form handler (Resend email to info@gigabox.ai) |
 | `/privacy` | Privacy policy |
 | `/terms` | Terms of service |
