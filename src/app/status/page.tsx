@@ -134,8 +134,7 @@ const infrastructure = [
 ];
 
 const liveUrls = [
-  { name: 'Praxis (EHR Web)', url: 'https://praxis.gigabox.ai' },
-  { name: 'Praxis (EHR Dashboard)', url: 'https://ehr.gigabox.ai' },
+  { name: 'Praxis (EHR)', url: 'https://praxis.gigabox.ai' },
   { name: 'OpenClaw Dashboard', url: 'https://openclaw.gigabox.ai' },
   { name: 'Hermes Dashboard', url: 'https://hermes.gigabox.ai' },
   { name: 'n8n Platform', url: 'https://n8n.gigabox.ai/health' },
