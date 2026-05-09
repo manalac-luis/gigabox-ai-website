@@ -63,6 +63,15 @@ const apps: AppCard[] = [
     status: 'live',
     href: '/apps/n8n',
   },
+  {
+    slug: 'comfyui',
+    name: 'ComfyUI',
+    tagline: 'AI image & video generation',
+    description:
+      'A managed ComfyUI instance with cloud inference via fal.ai. Build node-based workflows for image and video generation — no GPU, no Docker, just create.',
+    status: 'live',
+    href: '/apps/comfyui',
+  },
 ];
 
 const statusBadge: Record<AppCard['status'], { label: string; classes: string }> = {
