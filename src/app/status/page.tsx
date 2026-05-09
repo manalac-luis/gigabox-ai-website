@@ -127,7 +127,7 @@ const infrastructure = [
   { resource: 'VM', value: 'openclaw-prod (e2-standard-2, us-central1-a) — OC, Hermes, n8n, ComfyUI, Sovereign, Bot' },
   { resource: 'K8s Namespaces', value: 'praxis, vye-demo' },
   { resource: 'Artifact Registry', value: 'us-central1-docker.pkg.dev/gigabox-dev/axiom-prod-containers/' },
-  { resource: 'DNS', value: 'Cloud DNS zones: praxis, openclaw, hermes, n8n, comfyui, sovereign, sentinel' },
+  { resource: 'DNS', value: 'Cloud DNS zones: praxis, openclaw, hermes, n8n, comfyui, sovereign' },
   { resource: 'Auth', value: 'Clerk (3 projects: EHR, Praxis, OpenClaw/Hermes) + nginx basic_auth (ComfyUI) + n8n built-in' },
   { resource: 'GPU (RunPod)', value: 'On-demand H200 SXM pods for Sovereign (created as needed)' },
   { resource: 'AI Inference', value: 'DeepSeek V4 Flash — Sovereign (self-hosted) + OpenRouter (fallback) + fal.ai (ComfyUI)' },
@@ -141,7 +141,6 @@ const liveUrls = [
   { name: 'n8n Platform', url: 'https://n8n.gigabox.ai/health' },
   { name: 'ComfyUI Platform', url: 'https://comfyui.gigabox.ai/health' },
   { name: 'Sovereign API', url: 'https://sovereign.gigabox.ai/health' },
-  { name: 'Sentinel', url: 'https://sentinel.gigabox.ai' },
   { name: 'Gigabox Website', url: 'https://www.gigabox.ai' },
 ];
 
