@@ -17,6 +17,22 @@ type System = {
 
 const systems: System[] = [
   {
+    name: 'Pulse',
+    description: 'Multi-tenant business operating system. Sales pipeline, contact management, and AI intelligence — agent-first API, magic link auth.',
+    status: 'live',
+    url: 'https://pulse.gigabox.ai',
+    details: [
+      'FastAPI + uvicorn (Python 3.12)',
+      'Per-instance Postgres DB on Cloud SQL',
+      'viv-auth magic link authentication',
+      'DeepSeek V4 Flash via Sovereign',
+      'Agent-first REST API (Bearer token auth)',
+      'nginx reverse proxy + wildcard SSL',
+      'systemd per-instance isolation (512MB MemoryMax)',
+      'VM: openclaw-prod (shared)',
+    ],
+  },
+  {
     name: 'Sovereign',
     description: 'Self-hosted AI inference platform. GPU-first routing with transparent OpenRouter fallback.',
     status: 'live',
@@ -139,16 +155,17 @@ const systems: System[] = [
 const infrastructure = [
   { resource: 'GKE Cluster', value: 'axiom-prod-cluster (Autopilot, us-central1)' },
   { resource: 'Cloud SQL', value: 'axiom-prod-postgres (PG16, db-custom-2-8192)' },
-  { resource: 'VM', value: 'openclaw-prod (e2-standard-2, us-central1-a) — OC, Hermes, n8n, ComfyUI, OpenMAIC, Sovereign, Bot' },
+  { resource: 'VM', value: 'openclaw-prod (e2-standard-2, us-central1-a) — Pulse, OC, Hermes, n8n, ComfyUI, OpenMAIC, Sovereign, Bot' },
   { resource: 'K8s Namespaces', value: 'praxis, vye-demo' },
   { resource: 'Artifact Registry', value: 'us-central1-docker.pkg.dev/gigabox-dev/axiom-prod-containers/' },
-  { resource: 'DNS', value: 'Cloud DNS zones: praxis, openclaw, hermes, n8n, comfyui, maic, sovereign' },
-  { resource: 'Auth', value: 'Clerk (3 projects: EHR, Praxis, OpenClaw/Hermes) + nginx basic_auth (ComfyUI) + n8n built-in + access code (OpenMAIC)' },
+  { resource: 'DNS', value: 'Cloud DNS zones: pulse, praxis, openclaw, hermes, n8n, comfyui, maic, sovereign' },
+  { resource: 'Auth', value: 'Clerk (3 projects: EHR, Praxis, OpenClaw/Hermes) + viv-auth magic link (Pulse) + nginx basic_auth (ComfyUI) + n8n built-in + access code (OpenMAIC)' },
   { resource: 'GPU (RunPod)', value: 'On-demand H200 SXM pods for Sovereign (created as needed)' },
   { resource: 'AI Inference', value: 'DeepSeek V4 Flash — Sovereign (self-hosted) + OpenRouter (fallback) + fal.ai (ComfyUI)' },
 ];
 
 const liveUrls = [
+  { name: 'Pulse', url: 'https://pulse.gigabox.ai' },
   { name: 'Praxis (EHR)', url: 'https://praxis.gigabox.ai' },
   { name: 'OpenClaw Dashboard', url: 'https://openclaw.gigabox.ai' },
   { name: 'Hermes Dashboard', url: 'https://hermes.gigabox.ai' },
