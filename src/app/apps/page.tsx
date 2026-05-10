@@ -3,9 +3,9 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: 'Gigabox Apps | Built and operated by AI',
+  title: 'Gigabox Apps | Running systems',
   description:
-    'Production applications built and operated by AI at Gigabox. Each app is a working proof point for our build philosophy.',
+    'Eight production systems where AI agents do the routine work. CRM, EHR, inference, workflow automation, AI classrooms — operated autonomously.',
 };
 
 type AppCard = {
@@ -18,6 +18,15 @@ type AppCard = {
 };
 
 const apps: AppCard[] = [
+  {
+    slug: 'pulse',
+    name: 'Pulse',
+    tagline: 'Business operating system',
+    description:
+      'Unified sales pipeline, contact management, and AI intelligence — one state model, agent-first API, magic link auth. Dedicated Postgres on your own subdomain.',
+    status: 'live',
+    href: '/apps/pulse',
+  },
   {
     slug: 'sovereign',
     name: 'Sovereign',
@@ -102,11 +111,12 @@ export default function AppsPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-sm text-accent uppercase tracking-wider mb-4">Apps</div>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Built and operated by AI.
+            Running systems.
           </h1>
           <p className="text-lg text-foreground/70 max-w-3xl mb-16">
-            Each Gigabox app is a working proof point. Humans design the product. AI writes
-            the code, runs the tests, ships the deploys, and operates the infrastructure.
+            Each system addresses a domain where AI can operate autonomously.
+            Humans design the product. AI writes the code, ships the deploys,
+            and runs the infrastructure.
           </p>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

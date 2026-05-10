@@ -15,6 +15,12 @@ export default function Footer() {
             >
               Apps
             </Link>
+            <a
+              href="mailto:info@gigabox.ai"
+              className="text-sm text-background/70 hover:text-background transition-colors"
+            >
+              Contact
+            </a>
             <Link
               href="/privacy"
               className="text-sm text-background/70 hover:text-background transition-colors"
