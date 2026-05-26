@@ -59,12 +59,19 @@ const systems = [
     status: 'Live' as const,
     href: '/apps/maic',
   },
+  {
+    name: 'Atrium',
+    description:
+      'AI-native property management — tenant directory, maintenance AI, payment tracking for Philippine buildings.',
+    status: 'Coming Soon' as const,
+    href: '/apps/atrium',
+  },
 ];
 
 const layers = [
   {
     label: 'App',
-    components: 'Pulse, Praxis, MAIC, n8n, ComfyUI',
+    components: 'Pulse, Praxis, Atrium, MAIC, n8n, ComfyUI',
     note: 'User-facing systems with APIs',
   },
   {
@@ -80,7 +87,7 @@ const layers = [
 ];
 
 const facts = [
-  { label: 'Production systems', value: '8' },
+  { label: 'Production systems', value: '9' },
   { label: 'Inference', value: 'DeepSeek V4 Flash via Sovereign' },
   { label: 'Infrastructure cost', value: '~$250/month' },
   { label: 'All code written by', value: 'Claude Code' },
@@ -142,7 +149,9 @@ export default function Home() {
                       className={`text-xs px-2 py-1 rounded border ${
                         system.status === 'Live'
                           ? 'bg-green-100 text-green-800 border-green-200'
-                          : 'bg-blue-100 text-blue-800 border-blue-200'
+                          : system.status === 'Coming Soon'
+                            ? 'bg-amber-100 text-amber-800 border-amber-200'
+                            : 'bg-blue-100 text-blue-800 border-blue-200'
                       }`}
                     >
                       {system.status}

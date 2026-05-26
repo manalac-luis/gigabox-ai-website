@@ -1,7 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(req: NextRequest) {
-  let body: { name?: string; email?: string; product?: string };
+  let body: {
+    name?: string;
+    email?: string;
+    product?: string;
+    company?: string;
+    units?: string;
+    inquiryType?: string;
+    message?: string;
+  };
 
   try {
     body = await req.json();
@@ -9,7 +17,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
   }
 
-  const { name, email, product } = body;
+  const { name, email, product, company, units, inquiryType, message } = body;
 
   if (!name || !email) {
     return NextResponse.json(
@@ -31,12 +39,20 @@ export async function POST(req: NextRequest) {
     ? `[${product}] Instance request from ${name}`
     : `Contact request from ${name}`;
 
+  const optionalRows = [
+    company && `<tr><td style="padding:4px 12px 4px 0;font-weight:bold;">Company / Role</td><td>${escapeHtml(company)}</td></tr>`,
+    units && `<tr><td style="padding:4px 12px 4px 0;font-weight:bold;">Properties / Units</td><td>${escapeHtml(units)}</td></tr>`,
+    inquiryType && `<tr><td style="padding:4px 12px 4px 0;font-weight:bold;">Inquiry Type</td><td>${escapeHtml(inquiryType)}</td></tr>`,
+    message && `<tr><td style="padding:4px 12px 4px 0;font-weight:bold;">Message</td><td>${escapeHtml(message).replace(/\n/g, '<br>')}</td></tr>`,
+  ].filter(Boolean).join('\n      ');
+
   const html = `
     <h2>New instance request</h2>
     <table style="border-collapse:collapse;">
       <tr><td style="padding:4px 12px 4px 0;font-weight:bold;">Name</td><td>${escapeHtml(name)}</td></tr>
       <tr><td style="padding:4px 12px 4px 0;font-weight:bold;">Email</td><td>${escapeHtml(email)}</td></tr>
       <tr><td style="padding:4px 12px 4px 0;font-weight:bold;">Product</td><td>${escapeHtml(product || 'N/A')}</td></tr>
+      ${optionalRows}
       <tr><td style="padding:4px 12px 4px 0;font-weight:bold;">Time</td><td>${new Date().toISOString()}</td></tr>
     </table>
   `;

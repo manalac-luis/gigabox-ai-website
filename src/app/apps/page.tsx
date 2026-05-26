@@ -13,7 +13,7 @@ type AppCard = {
   name: string;
   tagline: string;
   description: string;
-  status: 'live' | 'beta';
+  status: 'live' | 'beta' | 'coming-soon';
   href: string;
 };
 
@@ -90,6 +90,15 @@ const apps: AppCard[] = [
     status: 'live',
     href: '/apps/maic',
   },
+  {
+    slug: 'atrium',
+    name: 'Atrium',
+    tagline: 'AI-native property management',
+    description:
+      'Tenant directory, maintenance AI, payment tracking, communications hub, and property analytics — built from the ground up for Philippine developers and building operators.',
+    status: 'coming-soon',
+    href: '/apps/atrium',
+  },
 ];
 
 const statusBadge: Record<AppCard['status'], { label: string; classes: string }> = {
@@ -100,6 +109,10 @@ const statusBadge: Record<AppCard['status'], { label: string; classes: string }>
   beta: {
     label: 'Beta · TestFlight',
     classes: 'bg-blue-100 text-blue-800 border-blue-200',
+  },
+  'coming-soon': {
+    label: 'Coming Soon',
+    classes: 'bg-amber-100 text-amber-800 border-amber-200',
   },
 };
 
