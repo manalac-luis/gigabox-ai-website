@@ -99,6 +99,15 @@ const apps: AppCard[] = [
     status: 'coming-soon',
     href: '/apps/atrium',
   },
+  {
+    slug: 'fathom',
+    name: 'Fathom',
+    tagline: 'Fleet tactical simulator',
+    description:
+      'Multi-platform, multi-domain naval combat with realistic physics. AI-driven crews, real geographic contexts, and structured wargame scenarios. Built for enthusiasts and configurable for training.',
+    status: 'coming-soon',
+    href: '/apps/fathom',
+  },
 ];
 
 const statusBadge: Record<AppCard['status'], { label: string; classes: string }> = {

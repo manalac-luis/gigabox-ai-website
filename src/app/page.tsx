@@ -66,6 +66,13 @@ const systems = [
     status: 'Coming Soon' as const,
     href: '/apps/atrium',
   },
+  {
+    name: 'Fathom',
+    description:
+      'Fleet tactical simulator — multi-domain naval combat with realistic physics and AI-driven crews.',
+    status: 'Coming Soon' as const,
+    href: '/apps/fathom',
+  },
 ];
 
 const layers = [
@@ -87,7 +94,7 @@ const layers = [
 ];
 
 const facts = [
-  { label: 'Production systems', value: '9' },
+  { label: 'Production systems', value: '10' },
   { label: 'Inference', value: 'DeepSeek V4 Flash via Sovereign' },
   { label: 'Infrastructure cost', value: '~$250/month' },
   { label: 'All code written by', value: 'Claude Code' },
