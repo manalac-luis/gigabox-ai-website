@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 export const metadata = {
   title: 'Gigabox Apps | Running systems',
   description:
-    'Eight production systems where AI agents do the routine work. CRM, EHR, inference, workflow automation, AI classrooms — operated autonomously.',
+    'Production systems where AI agents do the routine work. CRM, EHR, personal growth, inference, workflow automation, AI classrooms — operated autonomously.',
 };
 
 type AppCard = {
@@ -44,6 +44,15 @@ const apps: AppCard[] = [
       'Multi-tenant clinical practice management with patient portal, scheduling, telehealth, lab orders, prescriptions, referrals, and AI-generated visit summaries — built end-to-end by AI.',
     status: 'beta',
     href: '/apps/ehr',
+  },
+  {
+    slug: 'innerworks',
+    name: 'InnerWorks',
+    tagline: 'AI-personalized daily growth platform',
+    description:
+      'Daily practices built on the 4R InnerWorks Framework by Coach Arms — personalized by AI, under 10 minutes a day. Multi-tenant SaaS with Clerk auth, offline sync, and free/premium tiers.',
+    status: 'beta',
+    href: 'https://innerworks.gigabox.ai',
   },
   {
     slug: 'openclaw',
